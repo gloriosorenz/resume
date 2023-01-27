@@ -1,0 +1,280 @@
+/* 
+Color Palette:
+#2C3639
+#3F4E4F
+#A27B5C
+#DCD7C9
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background-color: #f5f5f5;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.container .section-left {
+    position: relative;
+    padding: 40px;
+    background-color: #2C3639;
+    color: #fff;
+}
+
+.profile-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.profile-section .image-box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-section .image-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid #f5f5f5;
+}
+
+.profile-section h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 1.4em;
+}
+
+/* Contact info section */
+.grouped-box {
+    padding-top: 40px;
+    line-height: 1.5em;
+}
+
+.grouped-box .title {
+    padding-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.grouped-box ul {
+    position: relative;
+
+}
+
+.grouped-box ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0px;
+}
+
+.grouped-box ul li .icon {
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #7D8F69;
+}
+
+/* Education section */
+.grouped-box.education li {
+    margin-bottom: 15px;
+}
+
+.grouped-box.education h5 {
+    color: #7D8F69;
+    font-weight: 500;
+}
+
+.grouped-box.education h4:nth-child(2) {
+    color: #fff;
+    font-weight: 500;
+}
+
+.grouped-box.education h4 {
+    color: #fff;
+    font-weight: 200;
+}
+
+/* Language section */
+.grouped-box.language .percent {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: black;
+    display: block;margin-top: 5px;
+}
+
+.grouped-box.grouped-box.language .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #7D8F69;
+}
+
+
+.container .section-right {
+    position: relative;
+    padding: 40px;
+    color: #2C3639;
+}
+
+/* Exerience section */
+.grouped-box2 {
+    margin-bottom: 50px;
+}
+
+.grouped-box:last-child {
+    margin-bottom: 0;
+}
+
+.title2 {
+    margin-bottom: 10px;
+}
+
+p {
+    color: #2C3639;
+}
+
+.grouped-box2 .box {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0px;
+}
+
+.grouped-box2 .box .year-company {
+    min-width: 150px;
+}
+
+.grouped-box2 .box .year-company h5 {
+    color: #606466;
+    font-weight: 600;
+}
+
+.grouped-box2 .box .text h4 {
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+/* Skills section */
+.skills .box {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills .box h4 {
+    font-weight: 500;
+}
+
+.skills .box .percent {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: rgb(89, 88, 88);
+}
+
+.skills .box .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #7D8F69;
+}
+
+/* Interests section */
+.interests .title2 {
+    margin-bottom: 20px;
+}
+
+.interests ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.interests ul li {
+    list-style: none;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+
+.interests ul li .fa {
+    font-size: 18px;
+    width: 20px;
+}
+
+ 
+@media only screen and (max-width: 999px){
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .interests ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+} 
+
+@media only screen and (max-width: 375px){
+    .grouped-box2 .box {
+        flex-direction: column;
+    }
+    .grouped-box2 .box .year-company {
+        min-width: 150px;
+        margin-bottom: 5px;
+    }
+
+    .interests ul {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .skills .box {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* @media only screen and (max-width: 768px){
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .container .section-left{
+        width:100%;
+        display:block;
+    }
+    
+    .container .section-right{
+        width:100%;
+        position:static;
+        display:block;
+    }
+} */
